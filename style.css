@@ -1,8 +1,20 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+section {
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }  
 body {
     font-family: 'Merriweather', serif;
     background-color:  #ebf2ff;
@@ -55,7 +67,7 @@ body {
 
 .hero__texts {
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 900;
     margin: 20px 0;
     color: #1d3557;
 }
@@ -78,7 +90,8 @@ body {
     font-weight: 800;
 }
 .food__card{
-    background-color: #f4f4f4;
+    border-radius: 6px 6px 0 0;
+    background-color: #fff;
 }
 
 .food__card__image{
@@ -92,11 +105,68 @@ body {
 
 .food__card__description{
     padding: 15px;
+    
 }
 
 #pizza__card{
     margin-top: -20px;
     margin-bottom: 20px;
+}
+
+.food__list__view__more{
+    margin: 2rem 0;
+    padding: 1rem;
+    color: #fff;
+    background: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+    border-radius: 6px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.restaurant__list__texts{
+    font-size: 1.5rem;
+  line-height: 2rem;
+  color: #1d3557;
+  font-weight: 900;
+
+}
+.restaurant__list__text{
+    margin: 1rem 0;
+    
+}
+.restaurant__list__container {
+    margin-top: 3rem;
+  
+  }
+
+  .restaurant__list__row1{
+    display: flex;
+    align-items: baseline;
+  }
+
+  .restaurant__list__row2{
+    display: flex;
+    margin-top: 10px;
+    align-items: flex-start;
+    flex-direction: row-reverse ;
+  }
+
+.restaurant1,.restaurant3{
+    width: 150px;
+    height: 80px;
+    margin: 0 5px;
+    border-radius: 4px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05)
+}
+
+.restaurant2,.restaurant4{
+    width: 200px;
+    height: 100px;
+    margin: 0 5px;
+    border-radius: 4px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 @media (min-width: 768px) {
 
@@ -141,6 +211,33 @@ body {
         flex-direction:row-reverse;
     }
 
+    .food__card{
+        border-radius: 6px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .food__list__view__more{
+        background: none;
+    }
+
+    .restaurant__list__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .restaurant__list__texts{
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+    .restaurant__list__row1{
+        justify-content: center;
+    }
+
+    .restaurant__list__row2{
+        margin-top: 3px;
+        align-items: flex-start;
+        justify-content: center;  
+    }
     
 }
 
@@ -171,4 +268,32 @@ body {
     .explore__menu__lists{
         gap: 25px;
     }
+
+    .food__list__view__more{
+        cursor: pointer;
+        margin-top: 4rem;
+    }
+
+    .food__list__view__more:hover {
+        background: #fff;
+        color: #dd2476;
+        margin: 4rem 20rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+    }
+    .restaurant2,
+  .restaurant4 {
+    width: 300px;
+    height: 260px;
+  }
+  .restaurant1,
+  .restaurant3 {
+    width: 250px;
+    height: 180px;
+  }
+
+  .restaurant__list__texts{
+    font-size: 3rem;
+    line-height:1;
+  }
 }
